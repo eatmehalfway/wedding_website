@@ -232,7 +232,7 @@ a {
 .welcome-script {
   margin: 0;
   color: #fff;
-  font-family: "Mr De Haviland", "Pinyon Script", cursive;
+  font-family: "Luxurious Script", "Pinyon Script", cursive;
   font-size: clamp(2.4rem, 17vw, 16rem);
   line-height: 0.85;
   margin-bottom: 0.55em;
@@ -248,7 +248,7 @@ a {
   gap: var(--space-1);
   margin: 0;
   color: #fff;
-  font-family: "Mr De Haviland", "Pinyon Script", cursive;
+  font-family: "Luxurious Script", "Pinyon Script", cursive;
   text-align: center;
 }
 
