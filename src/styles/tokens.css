@@ -1,0 +1,157 @@
+/*
+  Pressed paper — wedding site tokens.
+
+  Pigments are sampled from the reference images (Oct 25, 2026).
+  Components use the role variables below. Do not use --pigment-* in UI.
+
+  Day pages use blush (the default): Amelia & Patrick, August 28, Lake Tahoe.
+  Sprigs are the drawings in src/ornament/, recolored to --color-ornament.
+  Pattern bands use --color-leaf and --color-bell, and sit at an edge.
+  Other suites, set on any parent:
+    data-palette="ivory"        — cream ground, navy ink
+    data-palette="powder"       — powder ground, slate ink
+    data-palette="night"        — sleeping arrangements and night activities only
+
+  Webfonts to load when the site is built, in this order:
+    Bodoni Moda, Cormorant Garamond, Pinyon Script.
+  The stacks fall back to Didot, Iowan Old Style, and Snell Roundhand.
+*/
+
+:root {
+  /* Pigments */
+  --pigment-paper: #f6f0ec;
+  --pigment-blush-paper: #f4eae9;
+  --pigment-plaster: #e1dcd6;
+  --pigment-navy: #1f3160;
+  --pigment-warm-black: #362a2a;
+  --pigment-espresso: #3b2c24;
+  --pigment-taupe: #6b5c53;
+  --pigment-terracotta: #834630;
+  --pigment-rose: #a2766e;
+  --pigment-blossom: #ccaba5;
+  --pigment-powder: #dde5eb;
+  --pigment-powder-sunk: #d3dde4;
+  --pigment-powder-deep: #c2d2dc;
+  --pigment-slate: #4a5c70;
+  --pigment-botanical: #6e8197;
+  --pigment-slate-wash: #b9c6d3;
+  --pigment-card-white: #f0f2f3;
+  --pigment-night: #09151a;
+  --pigment-night-raised: #121e24;
+  --pigment-night-deep: #182429;
+  --pigment-candle: #f8efe4;
+  --pigment-candle-dim: #c9c4bd;
+  --pigment-petal: #c2baa9;
+  --pigment-leaf: #202820;
+  --pigment-indigo: #263f61;
+  --pigment-herb: #55567e;
+  --pigment-sage: #79806d;
+  --pigment-pattern-line: #363929;
+  --pigment-chartreuse: #a0913a;
+  --pigment-bell: #d6bc70;
+  --pigment-mum-ground: #1b3648;
+  --pigment-delft-cream: #f1eadb;
+
+  /* Roles — blush, the day default */
+  --color-ground: var(--pigment-blush-paper);
+  --color-surface: var(--pigment-paper);
+  --color-editorial: var(--pigment-plaster);
+  --color-ink: var(--pigment-warm-black);
+  --color-muted: var(--pigment-taupe);
+  --color-accent: var(--pigment-terracotta);
+  --color-rule: var(--pigment-blossom);
+  --color-ornament: var(--pigment-indigo);
+  --color-leaf: var(--pigment-sage);
+  --color-bell: var(--pigment-bell);
+  --color-on-accent: var(--pigment-blush-paper);
+
+  /* Type */
+  --font-display: "Bodoni Moda", Didot, "Bodoni MT", Palatino, serif;
+  --font-text: "Cormorant Garamond", "Iowan Old Style", Palatino, Georgia, serif;
+  --font-script: "Pinyon Script", "Snell Roundhand", "Apple Chancery", cursive;
+
+  --text-display: 4.5rem;
+  --leading-display: 0.92;
+  --tracking-display: 0.08em;
+
+  --text-name: 1.75rem;
+  --tracking-name: 0.18em;
+
+  --text-script: 2.25rem;
+
+  --text-kicker: 0.6875rem;
+  --tracking-kicker: 0.28em;
+
+  --text-body: 1.0625rem;
+  --leading-body: 1.7;
+
+  --text-nav: 0.9375rem;
+
+  --text-button: 0.6875rem;
+  --tracking-button: 0.16em;
+
+  /* Space */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+  --space-10: 128px;
+
+  --measure-prose: 34rem;
+  --measure-page: 72rem;
+
+  /* Shape. Pages stay flat. The shadow is for a physical invitation card only. */
+  --radius-sharp: 0;
+  --radius-card: 12px;
+  --shadow-card: 0 18px 40px rgb(31 49 96 / 8%);
+
+  --duration: 160ms;
+  --ease-out: cubic-bezier(0.2, 0, 0, 1);
+}
+
+[data-palette="ivory"] {
+  --color-ground: var(--pigment-paper);
+  --color-surface: var(--pigment-blush-paper);
+  --color-editorial: var(--pigment-plaster);
+  --color-ink: var(--pigment-navy);
+  --color-muted: var(--pigment-taupe);
+  --color-accent: var(--pigment-terracotta);
+  --color-rule: var(--pigment-blossom);
+  --color-ornament: var(--pigment-indigo);
+  --color-leaf: var(--pigment-sage);
+  --color-bell: var(--pigment-bell);
+  --color-on-accent: var(--pigment-paper);
+}
+
+[data-palette="powder"] {
+  --color-ground: var(--pigment-powder);
+  --color-surface: var(--pigment-powder-sunk);
+  --color-editorial: var(--pigment-powder-deep);
+  --color-ink: var(--pigment-slate);
+  --color-muted: var(--pigment-slate);
+  --color-accent: var(--pigment-slate);
+  --color-rule: var(--pigment-slate-wash);
+  --color-ornament: var(--pigment-indigo);
+  --color-leaf: var(--pigment-sage);
+  --color-bell: var(--pigment-bell);
+  --color-on-accent: var(--pigment-card-white);
+}
+
+[data-palette="night"] {
+  --color-ground: var(--pigment-night);
+  --color-surface: var(--pigment-night-raised);
+  --color-editorial: var(--pigment-night-deep);
+  --color-ink: var(--pigment-candle);
+  --color-muted: var(--pigment-candle-dim);
+  --color-accent: var(--pigment-candle);
+  --color-rule: var(--pigment-petal);
+  --color-ornament: var(--pigment-petal);
+  --color-leaf: var(--pigment-leaf);
+  --color-bell: var(--pigment-bell);
+  --color-on-accent: var(--pigment-night);
+}
