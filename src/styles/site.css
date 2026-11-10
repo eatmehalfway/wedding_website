@@ -64,6 +64,7 @@ a {
 .nav-links {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   justify-content: flex-end;
   gap: var(--space-4);
   margin: 0;
@@ -90,6 +91,35 @@ a {
 
 .nav-links a[aria-current="page"] {
   border-bottom-color: var(--color-ink);
+}
+
+.nav-links a.nav-rsvp {
+  border-bottom-color: transparent;
+  background: var(--color-ink);
+  color: var(--color-on-accent);
+  font-family: var(--font-text);
+  font-style: normal;
+  font-size: var(--text-button);
+  letter-spacing: var(--tracking-button);
+  text-transform: uppercase;
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-sharp);
+}
+
+.nav-links a.nav-rsvp[aria-current="page"] {
+  border-bottom-color: transparent;
+}
+
+.site-footer {
+  padding: var(--space-8) var(--space-5) var(--space-6);
+  text-align: center;
+}
+
+.site-footer p {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: var(--text-kicker);
+  letter-spacing: var(--tracking-kicker);
 }
 
 .herb-row {
@@ -153,10 +183,6 @@ a {
     gap: 0.3rem;
   }
 
-  .countdown-count {
-    font-size: 2rem;
-  }
-
   .names {
     font-size: clamp(1.55rem, 7.2vw, 2.15rem);
     letter-spacing: 0.08em;
@@ -211,8 +237,8 @@ a {
 .welcome-script {
   margin: 0;
   color: #fff;
-  font-family: "Mr Dafoe", "Pinyon Script", cursive;
-  font-size: clamp(2.6rem, 8.5vw, 8rem);
+  font-family: "Mr De Haviland", "Pinyon Script", cursive;
+  font-size: clamp(2.4rem, 17vw, 16rem);
   line-height: 0.85;
   margin-bottom: 0.55em;
   text-align: center;
@@ -225,23 +251,23 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: var(--space-2);
+  gap: var(--space-1);
   margin: 0;
   color: #fff;
+  font-family: "Mr De Haviland", "Pinyon Script", cursive;
   text-align: center;
 }
 
 .countdown-count {
-  font-size: clamp(2.5rem, 5vw, 4.5rem);
-  line-height: 1;
+  font-size: clamp(1.5rem, 6vw, 5.5rem);
+  line-height: 0.8;
   text-shadow: 0 1px 12px rgb(9 21 26 / 35%);
 }
 
 .countdown-label {
   color: #fff;
-  font-size: var(--text-kicker);
-  letter-spacing: var(--tracking-kicker);
-  text-transform: uppercase;
+  font-size: clamp(1.15rem, 3vw, 2.75rem);
+  line-height: 0.8;
   text-shadow: 0 1px 12px rgb(9 21 26 / 35%);
 }
 
