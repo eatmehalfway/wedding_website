@@ -97,12 +97,7 @@ a {
   border-bottom-color: transparent;
   background: var(--color-ink);
   color: var(--color-on-accent);
-  font-family: var(--font-text);
-  font-style: normal;
-  font-size: var(--text-button);
-  letter-spacing: var(--tracking-button);
-  text-transform: uppercase;
-  padding: var(--space-2) var(--space-4);
+  padding: var(--space-1) var(--space-3);
   border-radius: var(--radius-sharp);
 }
 
