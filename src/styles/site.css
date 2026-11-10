@@ -32,7 +32,7 @@ a {
 }
 
 .hero {
-  padding: 0 var(--space-5) var(--space-9);
+  padding: 0 0 var(--space-9);
 }
 
 .story,
@@ -149,6 +149,14 @@ a {
 }
 
 @media (max-width: 719px) {
+  .countdown {
+    gap: 0.3rem;
+  }
+
+  .countdown-count {
+    font-size: 2rem;
+  }
+
   .names {
     font-size: clamp(1.55rem, 7.2vw, 2.15rem);
     letter-spacing: 0.08em;
@@ -175,8 +183,8 @@ a {
 
 .welcome {
   position: relative;
-  width: min(100%, var(--measure-page));
-  margin: var(--space-6) auto 0;
+  width: 100%;
+  margin: var(--space-6) 0 0;
   aspect-ratio: 16 / 9;
   overflow: hidden;
   background: var(--pigment-night);
@@ -189,20 +197,27 @@ a {
   object-fit: cover;
 }
 
-.welcome-script {
+.welcome-copy {
   position: absolute;
   inset: 0;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: clamp(0.15rem, 1vw, 0.75rem);
+  padding: var(--space-4);
+}
+
+.welcome-script {
   margin: 0;
-  padding: 0 var(--space-4);
   color: #fff;
-  font-family: var(--font-script);
-  font-size: clamp(2.35rem, 7vw, 5.5rem);
-  line-height: 1;
+  font-family: "Mr Dafoe", "Pinyon Script", cursive;
+  font-size: clamp(2.6rem, 8.5vw, 8rem);
+  line-height: 0.85;
+  margin-bottom: 0.55em;
   text-align: center;
-  text-shadow: 0 1px 16px rgb(9 21 26 / 45%);
+  text-shadow: 0 2px 18px rgb(9 21 26 / 40%);
+  transform: rotate(-7deg);
   pointer-events: none;
 }
 
@@ -211,20 +226,23 @@ a {
   flex-direction: column;
   align-items: center;
   gap: var(--space-2);
-  margin: var(--space-6) 0 0;
+  margin: 0;
+  color: #fff;
   text-align: center;
 }
 
 .countdown-count {
-  font-size: clamp(2.75rem, 5vw, 4.5rem);
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
   line-height: 1;
+  text-shadow: 0 1px 12px rgb(9 21 26 / 35%);
 }
 
 .countdown-label {
-  color: var(--color-muted);
+  color: #fff;
   font-size: var(--text-kicker);
   letter-spacing: var(--tracking-kicker);
   text-transform: uppercase;
+  text-shadow: 0 1px 12px rgb(9 21 26 / 35%);
 }
 
 .hero-lockup {
@@ -234,6 +252,7 @@ a {
   gap: var(--space-5);
   max-width: min(100%, 48rem);
   margin: var(--space-8) auto 0;
+  padding: 0 var(--space-5);
   text-align: center;
 }
 
@@ -551,7 +570,7 @@ textarea {
 
 @media (min-width: 720px) {
   .site-header,
-  .hero,
+  .hero-lockup,
   .story,
   .schedule,
   .lockup,
