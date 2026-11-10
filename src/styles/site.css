@@ -237,7 +237,6 @@ a {
   line-height: 0.85;
   margin-bottom: 0.55em;
   text-align: center;
-  text-shadow: 0 2px 18px rgb(9 21 26 / 40%);
   transform: rotate(-7deg);
   pointer-events: none;
 }
@@ -256,14 +255,12 @@ a {
 .countdown-count {
   font-size: clamp(1.5rem, 6vw, 5.5rem);
   line-height: 0.8;
-  text-shadow: 0 1px 12px rgb(9 21 26 / 35%);
 }
 
 .countdown-label {
   color: #fff;
   font-size: clamp(1.15rem, 3vw, 2.75rem);
   line-height: 0.8;
-  text-shadow: 0 1px 12px rgb(9 21 26 / 35%);
 }
 
 .hero-lockup {
